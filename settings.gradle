@@ -1,1 +1,5 @@
 rootProject.name = 'transporte'
+include 'infraestructura'
+include 'aplicacion'
+include 'dominio'
+

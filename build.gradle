@@ -1,20 +1,43 @@
-plugins {
-	id 'org.springframework.boot' version '2.7.5'
-	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-	id 'java'
+allprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+
+	group = 'com.sandbox'
+	version = '0.0.1'
+	sourceCompatibility = '1.8'
+
+	repositories {
+		mavenCentral()
+	}
+
+	project.ext.springbootweb = ["org.springframework.boot:spring-boot-starter-web:2.7.5"]
+	project.ext.springboottest = ["org.springframework.boot:spring-boot-starter-test:2.7.5"]
+	project.ext.junit = ["junit:junit:4.13.2"]
+
+	project.ext.inject = ["javax.inject:javax.inject:1"]
 }
 
-group = 'com.sandbox'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
-
-repositories {
-	mavenCentral()
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.7.5")
+	}
 }
+
+apply plugin: 'org.springframework.boot'
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation project.ext.springbootweb
+	testImplementation project.ext.springboottest
+
+	implementation project(':infraestructura')
+}
+
+bootJar {
+	mainClass = 'com.sandbox.transporte.TransporteApplication'
+	baseName = 'transporte-pagos'
 }
 
 tasks.named('test') {

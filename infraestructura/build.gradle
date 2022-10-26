@@ -1,0 +1,13 @@
+dependencies {
+    implementation project.ext.springbootweb
+
+    testImplementation project.ext.springboottest
+    testImplementation project.ext.junit
+
+    implementation project(":aplicacion")
+    implementation project(":dominio")
+}
+
+test {
+    useJUnitPlatform()
+}

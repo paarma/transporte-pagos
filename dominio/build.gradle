@@ -1,0 +1,8 @@
+dependencies {
+    implementation project.ext.inject
+    testImplementation project.ext.junit
+}
+
+test {
+    useJUnitPlatform()
+}

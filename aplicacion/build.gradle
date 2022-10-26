@@ -1,0 +1,10 @@
+dependencies {
+    implementation project.ext.inject
+    testImplementation project.ext.junit
+
+    implementation project(":dominio")
+}
+
+test {
+    useJUnitPlatform()
+}
