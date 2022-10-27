@@ -1,4 +1,13 @@
 server:
   servlet:
     context-path: /api/transporte
-  port: 8083
+  port: 8084
+
+key:
+  pub: ENC(4ueq6bRoICGnEHFzntpKa6w24jXNa+ON9USwcYYKsBCOIiEpK3UFNIq52d6CWDtPSSGsIpDrlfU=)
+  prv: TEST
+
+jasypt:
+  encryptor:
+    password: ${JASYPTKEY}
+    algorithm: PBEWithMD5AndDES

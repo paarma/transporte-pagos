@@ -4,6 +4,8 @@ dependencies {
     testImplementation project.ext.springboottest
     testImplementation project.ext.junit
 
+    implementation project.ext.jasyptspringboot
+
     implementation project(":aplicacion")
     implementation project(":dominio")
 }

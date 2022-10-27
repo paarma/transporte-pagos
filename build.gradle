@@ -13,6 +13,7 @@ allprojects {
 	project.ext.springbootweb = ["org.springframework.boot:spring-boot-starter-web:2.7.5"]
 	project.ext.springboottest = ["org.springframework.boot:spring-boot-starter-test:2.7.5"]
 	project.ext.junit = ["junit:junit:4.13.2"]
+	project.ext.jasyptspringboot = ["com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.4"]
 
 	project.ext.inject = ["javax.inject:javax.inject:1"]
 }
@@ -31,6 +32,8 @@ apply plugin: 'org.springframework.boot'
 dependencies {
 	implementation project.ext.springbootweb
 	testImplementation project.ext.springboottest
+
+	implementation project.ext.jasyptspringboot
 
 	implementation project(':infraestructura')
 }
