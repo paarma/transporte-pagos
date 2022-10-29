@@ -10,6 +10,8 @@ dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.7.4'
     implementation 'org.flywaydb:flyway-core'
     implementation group: 'org.flywaydb', name: 'flyway-mysql', version: '9.4.0'
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
 
     implementation project(":aplicacion")
     implementation project(":dominio")

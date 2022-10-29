@@ -1,4 +1,4 @@
-package com.sandbox.entitys;
+package com.sandbox.persistencia.entitys;
 
 import javax.persistence.*;
 
