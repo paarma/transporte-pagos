@@ -11,3 +11,15 @@ jasypt:
   encryptor:
     password: ${JASYPTKEY}
     algorithm: PBEWithMD5AndDES
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: ${CONEXIONBD}
+    username: ${USERBD}
+    password: ${PASSWORD}
+
+  flyway:
+    locations:
+      - classpath:db/migration
+      - classpath:db/data
