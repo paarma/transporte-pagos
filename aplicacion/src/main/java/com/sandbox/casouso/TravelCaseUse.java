@@ -18,4 +18,8 @@ public class TravelCaseUse {
     public List<Travel> getListAllTravel(){
         return travelService.getAll();
     }
+
+    public Travel save(Travel travel) {
+        return travelService.save(travel);
+    }
 }

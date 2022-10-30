@@ -18,4 +18,9 @@ public class TravelService {
     public List<Travel> getAll(){
         return travelRepository.getAll();
     }
+
+    public Travel save(Travel travel) {
+        return travelRepository.save(travel);
+    }
+
 }

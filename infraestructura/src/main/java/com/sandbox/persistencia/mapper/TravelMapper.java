@@ -2,6 +2,7 @@ package com.sandbox.persistencia.mapper;
 
 import com.sandbox.entidades.Travel;
 import com.sandbox.persistencia.entitys.Viaje;
+import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
@@ -28,4 +29,6 @@ public interface TravelMapper {
 
     List<Travel> toTravels(List<Viaje> viajes);
 
+    @InheritInverseConfiguration
+    Viaje toViaje(Travel travel);
 }

@@ -8,4 +8,5 @@ public interface TravelRepository {
 
     List<Travel> getAll();
 
+    Travel save(Travel travel);
 }
