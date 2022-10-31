@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 @Repository
 public class PagoRepositorio implements PayRepository {
 
-    private static final String PATH_API_WOMPI = "https://sandbox.wompi.co/v1/";
+    private static final String PATH_API = "https://sandbox.wompi.co/v1/";
     public static final String ERROR_CREATING_PAYMENT = "Error creating payment";
     private WebClient webClient;
 
@@ -29,7 +29,7 @@ public class PagoRepositorio implements PayRepository {
     public PayData createPay(PayData payData) {
 
         StringBuilder pathApiDataSourcePay = new StringBuilder();
-        pathApiDataSourcePay.append(PATH_API_WOMPI)
+        pathApiDataSourcePay.append(PATH_API)
                 .append("transactions");
 
         DataResponsePay payDataResponse = this.webClient.post()

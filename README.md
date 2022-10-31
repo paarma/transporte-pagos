@@ -10,3 +10,4 @@
 * Connection to external DB (mysql)
 * Flyway (Version of the structure and population of the DB).
 * MapStruct (Mapper. Mapping Entities to domain objects).
+* Jasypt for encryption data
